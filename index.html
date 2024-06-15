@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">Tic Tac Toe</a>
+            <form class="d-flex">
+                <button class="btn btn-outline-success" type="button" onclick="reset()">Reset</button>
+                <button type="button" id="hi" onclick="stateChange()" class="btn btn-dark">Play against computer</button>
+            </form>
+        </div>
+    </nav>
+    <h1 id="head">X's turn</h1>
+    <div class="grid-container">
+        <div class="grid-item" id="1" onclick="clicked(this.id)">
+            <img class="img cross" id="cross1" src="cross.webp" alt="">
+            <img class="img circle" id="cricle1" src="circle.png" alt="">
+        </div>
+        <div class="grid-item" id="2" onclick="clicked(this.id)">
+            <img class="img cross" id="cross2" src="cross.webp" alt="">
+            <img class="img circle" id="cricle2" src="circle.png" alt="">
+        </div>
+        <div class="grid-item" id="3" onclick="clicked(this.id)">
+            <img class="img cross" id="cross3" src="cross.webp" alt="">
+            <img class="img circle" id="cricle3" src="circle.png" alt="">
+        </div>
+        <div class="grid-item" id="4" onclick="clicked(this.id)">
+            <img class="img cross" id="cross4" src="cross.webp" alt="">
+            <img class="img circle" id="cricle4" src="circle.png" alt="">
+        </div>
+        <div class="grid-item" id="5" onclick="clicked(this.id)">
+            <img class="img cross" id="cross5" src="cross.webp" alt="">
+            <img class="img circle" id="cricle5" src="circle.png" alt="">
+        </div>
+        <div class="grid-item" id="6" onclick="clicked(this.id)">
+            <img class="img cross" id="cross6" src="cross.webp" alt="">
+            <img class="img circle" id="cricle6" src="circle.png" alt="">
+        </div>
+        <div class="grid-item" id="7" onclick="clicked(this.id)">
+            <img class="img cross" id="cross7" src="cross.webp" alt="">
+            <img class="img circle" id="cricle7" src="circle.png" alt="">
+        </div>
+        <div class="grid-item" id="8" onclick="clicked(this.id)">
+            <img class="img cross" id="cross8" src="cross.webp" alt="">
+            <img class="img circle" id="cricle8" src="circle.png" alt="">
+        </div>
+        <div class="grid-item" id="9" onclick="clicked(this.id)">
+            <img class="img cross" id="cross9" src="cross.webp" alt="">
+            <img class="img circle" id="cricle9" src="circle.png" alt="">
+        </div>
+    </div>
+    <div class="leaderboard">
+        <div class="X">
+            <h2>X</h2>
+            <h2 id="X">0</h2>
+        </div>
+        <div class="O">
+            <h2>O</h2>
+            <h2 id="O">0</h2>
+        </div>
+        <button type="button" style="display: block; margin-left: 45%; margin-top: 20px;" onclick="resetScore()" class="btn btn-danger">Reset Score</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
