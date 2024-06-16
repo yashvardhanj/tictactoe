@@ -3,10 +3,10 @@ let row = 3;
 let col = 3;
 let h = 100;
 let state = 1;  // state=0 -> playing against computer, state=1 -> playing pvp
-let count = 1;
-Xwins=0;
-Ywins=0;
-// Initialize the 2D array
+let count = 1;//phele x ki chance
+let Xwins = 0;
+let Ywins = 0;
+
 for (let i = 0; i < row; i++) {
     gfg[i] = [];
     for (let j = 0; j < col; j++) {
@@ -55,12 +55,12 @@ function clicked(id) {
     if (result == 1) {
         heading.innerHTML = "X wins";
         Xwins++;
-        document.getElementById("X").innerHTML=Xwins;
+        document.getElementById("X").innerHTML = Xwins;
         setTimeout(reset, 5000);
     } else if (result == 0) {
         heading.innerHTML = "O wins";
         Ywins++;
-        document.getElementById("O").innerHTML=Ywins;
+        document.getElementById("O").innerHTML = Ywins;
         setTimeout(reset, 5000);
     } else if (result == -1) {
         heading.innerHTML = "Draw";
@@ -95,7 +95,7 @@ function checkWin() {
         }
     }
 
-    return -1; // Draw
+    return -1; 
 }
 
 function reset() {
@@ -123,9 +123,9 @@ function stateChange() {
     }
 }
 
-function resetScore(){
-    Xwins=0;
-    Ywins=0;
-    document.getElementById("X").innerHTML=Xwins;
-    document.getElementById("O").innerHTML=Ywins;
+function resetScore() {
+    Xwins = 0;
+    Ywins = 0;
+    document.getElementById("X").innerHTML = Xwins;
+    document.getElementById("O").innerHTML = Ywins;
 }
